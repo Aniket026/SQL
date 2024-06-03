@@ -1,0 +1,15 @@
+
+select first_name,last_name from employees
+where first_name='rahul' and last_name='joshi'
+
+select first_name,last_name from employees
+where first_name='rahul' or last_name='joshi'
+
+select first_name,last_name from employees
+where first_name='rahul' and last_name='joshi' or first_name='aniket' and last_name='borawake'
+
+elect first_name,last_name from employees
+where first_name='rahul' and last_name='joshi' and id='120' or first_name='aniket' and last_name='borawake'
+
+select first_name,last_name from employees
+where (first_name='rahul' or last_name='joshi') and state='ind'
