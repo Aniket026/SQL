@@ -1,0 +1,9 @@
+select count(emp_no) from employees
+
+select min(emp_no) from employees
+
+select max(emp_no) from employees
+
+SELECT  max(salary) from salaries
+
+SELECT  AVG(salary) from salaries
