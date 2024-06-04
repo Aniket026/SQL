@@ -1,0 +1,21 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT,
+    email TEXT,
+    city TEXT
+);
+
+INSERT INTO users (name, email, city) VALUES
+('Alice Johnson', 'alice@example.com', 'New York'),
+('Bob Smith', 'bob@example.com', 'Los Angeles'),
+('Charlie Davis', 'charlie@example.net', 'Chicago'),
+('David Brown', 'david@example.org', 'Houston'),
+('Eve White', 'eve@example.com', 'Phoenix');
+
+SELECT * FROM users WHERE name LIKE 'A%';
+SELECT * FROM users WHERE email LIKE '%.com';
+SELECT * FROM users WHERE city LIKE '%o%';
+
+
+SELECT * FROM users WHERE name ILIKE 'a%';
+SELECT * FROM users WHERE city ILIKE '%O%';
