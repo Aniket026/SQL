@@ -1,0 +1,27 @@
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+INSERT INTO employees (id, name, age, department, salary) VALUES
+(1, 'John Doe', 28, 'Sales', 50000),
+(2, 'Jane Smith', 34, 'HR', 60000),
+(3, 'Jim Brown', 45, 'Finance', 80000),
+(4, 'Jake White', 32, 'IT', 70000),
+(5, 'Julia Green', 29, 'Marketing', 55000),
+(6, 'Joan Black', 38, 'Sales', 62000),
+(7, 'Jack Grey', 41, 'HR', 75000);
+
+
+SELECT * FROM employees
+WHERE department IN ('Sales', 'HR');
+
+SELECT * FROM employees
+WHERE name IN ('John Doe', 'Jack Grey');
+
+SELECT * FROM employees
+WHERE id IN (3, 6,4);
