@@ -1,0 +1,18 @@
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName TEXT,
+    LastName TEXT,
+    Department TEXT,
+    Salary INT
+);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Department, Salary) VALUES
+(1, 'John', 'Doe', 'HR', 60000),
+(2, 'Jane', 'Smith', 'IT', 75000),
+(3, 'Sam', 'Brown', 'HR', 60000),
+(4, 'Sara', 'Davis', 'Finance', 80000),
+(5, 'Mike', 'Wilson', 'IT', 75000);
+
+SELECT DISTINCT Department FROM Employees;
+SELECT DISTINCT Salary FROM Employees;
+
+SELECT DISTINCT FirstName, LastName FROM Employees;
