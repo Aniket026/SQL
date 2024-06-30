@@ -1,0 +1,19 @@
+SELECT * FROM employees;
+
+SELECT name, position FROM employees;
+
+SELECT * FROM employees WHERE salary > 50000;
+
+SELECT * FROM employees WHERE department = 'Sales';
+
+SELECT COUNT(*) FROM employees;
+
+SELECT AVG(salary) FROM employees;
+
+SELECT * FROM employees WHERE hire_date > '2020-01-01';
+
+SELECT MAX(salary) FROM employees;
+
+SELECT * FROM employees WHERE name LIKE 'A%';
+
+SELECT DISTINCT department FROM employees;
