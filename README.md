@@ -1,6 +1,6 @@
 # 2-SQL
 <h2>SQL- Structured Query Language</h2>
-<h4>Index</h4>
+<h4>Contents</h4>
 <ol>
   <li>Basic SQL</li>
   <li>Advanced SQL</li>
