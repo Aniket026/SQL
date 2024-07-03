@@ -1,0 +1,25 @@
+SELECT * from customer
+	
+select * from customer
+where (first_name='Jared' or last_name='Ely') AND activebool='true'
+	
+
+select * from customer 
+where create_date>='2006-02-14' and ( store_id='1' and not first_name ilike 'E%')
+
+
+select sum(address_id) from  customer 
+where  not store_id  ='1'
+
+	
+------------------------------------------------------------------------------------------
+	
+select * from products
+
+select prod_id from products
+where  actor='MENA GABLE'
+
+
+
+select * from products
+where category>6 and(price>20 and not (actor like 'V%'  or actor like  'C%'))
