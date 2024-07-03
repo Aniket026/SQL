@@ -19,3 +19,56 @@ SELECT * FROM users WHERE city LIKE '%o%';
 
 SELECT * FROM users WHERE name ILIKE 'a%';
 SELECT * FROM users WHERE city ILIKE '%O%';
+
+
+
+#----------------------------------------------------------------------------------------------
+
+
+
+
+select * from customers 
+where firstname ilike 'G%';
+
+select * from customers 
+where zip like '1%';
+
+
+select * from customers 
+where firstname like 'k__%';
+
+
+select  * from customer 
+where first_name like 'J%';
+
+
+select  count(*) from customer 
+where first_name like 'J%';
+
+
+select count(*) from customer
+where (first_name like 'J%' AND last_name like 'S%' );
+
+
+select count(*) from customer
+where first_name ilike '%j' AND last_name ilike 'j%'
+
+
+select count(*) from customer
+where first_name ilike 'k%' AND last_name ilike 'l%';
+
+
+select * from customer
+where first_name like '%ft%'
+
+
+select  first_name from customer 
+where last_name ilike '%dk%'
+
+
+select * from customer
+where first_name like 'f_h'
+
+
+
+
