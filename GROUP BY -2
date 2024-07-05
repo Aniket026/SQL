@@ -1,0 +1,94 @@
+select * from payment
+
+
+select customer_id ,staff_id,sum(amount) from payment
+group by staff_id ,customer_id
+
+
+
+select customer_id ,staff_id,sum(amount) from payment
+group by staff_id ,customer_id
+order by staff_id
+
+
+
+select customer_id ,staff_id,sum(amount) from payment
+where customer_id >500
+group by staff_id ,customer_id
+order by sum(amount)
+
+
+
+select customer_id,staff_id,sum(amount) from payment
+group by customer_id,staff_id
+order by  customer_id,staff_id
+
+
+select * from payment 
+
+
+
+select customer_id,staff_id,sum(amount) from payment
+
+
+select DATE(payment_date),sum(amount) from payment
+group by date(payment_date)
+
+select DATE(payment_date),sum(amount) from payment
+group by date(payment_date)
+order by (sum)
+
+	
+select * from payment 
+
+	
+select staff_id,sum(amount) from payment
+group by staff_id
+
+	
+select * from film
+	
+
+select rating,avg(replacement_cost) from film
+group by rating
+order by avg(replacement_cost)
+
+
+select * from customer
+
+
+select customer_id,  sum(amount) from payment
+group by  customer_id
+order by sum(amount) desc
+limit 5
+
+	
+--having
+
+select customer_id ,sum(amount) from payment
+where customer_id NOT IN(184,87,477)
+group by customer_id
+
+
+select customer_id ,sum(amount) from payment
+group by customer_id
+having sum(amount)>100
+order by sum(amount)
+
+
+select * from  city
+
+
+select country_id,count(country_id) from city
+where  city ilike 'A%' or city ilike 'B%'
+group by country_id
+having count(country_id)>1
+order by count(country_id) desc
+
+
+select * from rental
+
+
+
+
+
