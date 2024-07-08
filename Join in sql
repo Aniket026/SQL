@@ -22,3 +22,32 @@ WHERE A.ManagerID = B.EmployeeID;
 SELECT Orders.OrderID, Customers.CustomerName
 FROM Orders
 CROSS JOIN Customers;
+
+
+
+select payment_id,payment.customer_id,first_name from payment
+inner join customer
+on payment.customer_id=customer.customer_id
+	
+
+select payment_id,payment.customer_id,first_name from customer
+inner join payment
+on payment.customer_id=customer.customer_id
+
+
+select * from payment
+full outer join customer
+on  payment.customer_id=customer.customer_id
+
+
+select * from payment
+left outer join customer
+on  payment.customer_id=customer.customer_id
+
+
+select * from payment
+right outer join customer
+on  payment.customer_id=customer.customer_id
+
+
+
