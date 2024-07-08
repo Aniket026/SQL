@@ -1,0 +1,28 @@
+
+
+select customer_id,sum(amount) as total_amount from payment 
+group by customer_id
+having sum(amount)>50
+order by customer_id
+
+
+select count(amount) as num_transactions
+from  payment
+
+
+select customer_id, sum(amount) as total  from payment
+group by customer_id
+
+
+
+select customer_id,sum(amount) as total_amount from payment
+where customer_id like 'F%'
+group by customer_id
+having sum(amount)>0
+order by customer_id
+
+
+
+
+
+
