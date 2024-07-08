@@ -50,4 +50,15 @@ right outer join customer
 on  payment.customer_id=customer.customer_id
 
 
+select customers.customerid,firstname from customers 
+left join orders
+on  customers.customerid=orders.customerid
+where  firstname like  'R%'
+
+
+select customers.customerid,firstname from customers 
+left join orders
+on  customers.customerid=orders.customerid
+where  firstname like  'R%'
+
 
