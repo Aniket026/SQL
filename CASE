@@ -1,0 +1,40 @@
+
+	
+select customer_id ,
+case  customer_id 
+	when 2 then 'winner'
+    when 5 then 'second'
+    else 'normal'
+
+END AS results
+From customer
+
+
+
+select * from film
+
+
+select rental_rate from film
+
+	
+select  rental_rate,
+case  rental_rate
+	when .99 then 1
+    when 4.99 then 5
+else round(rental_rate,1)
+END AS results
+From  film
+
+
+select 
+sum(case rental_rate 
+	when 0.99 then 1
+	when 2.99 then 3
+	when 4.99 then 5
+else 0
+END ) as number_of_bargain
+from film
+
+
+
+
