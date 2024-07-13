@@ -24,3 +24,27 @@ select extract (year from date '2004-01-07') AS year
 
 
 select date_trunc('year',date'1992/11/13')
+
+
+
+
+
+select AGE(birth_date), * from employees
+where  extract (year from age(birth_date))>60
+
+
+
+select count(birth_date) from employees
+where birth_date <now() - interval '61 years'
+
+--select how many employee hire in february---------------------------------
+	
+
+select count(birth_date) from employees
+where extract (month from hire_date )=2;
+
+
+
+select count(birth_date) from employees
+where extract (month from birth_date )=11;
+
