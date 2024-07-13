@@ -1,0 +1,26 @@
+--AGE----------------
+	
+
+select AGE(date'1800-01-01')
+
+
+select AGE(date '1992-11-13', date '1800/01/01')
+
+	
+
+---EXTRACT
+	
+
+select extract (day from date '2004-01-07') AS Day
+
+
+
+select extract (month from date '2004-01-07') AS month
+	
+
+
+select extract (year from date '2004-01-07') AS year
+	
+
+
+select date_trunc('year',date'1992/11/13')
