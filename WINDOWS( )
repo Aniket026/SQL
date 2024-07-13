@@ -1,0 +1,27 @@
+--over
+
+select *,max(salary) over() from salaries
+
+
+select *,max(salary) over() from salaries
+limit 100
+
+
+
+select *,max(salary) over() from salaries
+where salary<70000
+
+
+select *,avg(salary) over() from salaries
+
+
+
+select *,d.dept_name,avg(salary) over() from salaries
+join dept_emp as de using (emp_no)
+join departments as d using (dept_no)
+
+
+select *,dept_name,avg(salary) over(PARTITION by d.dept_name)
+from salaries
+join dept_emp as de using (emp_no)
+join departments as d using (dept_no)
