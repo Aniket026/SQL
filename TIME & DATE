@@ -1,0 +1,42 @@
+
+-time & date
+
+show timezone
+
+
+	
+--timestamp
+	
+select now()
+
+	
+create table timezones(
+	ts timestamp without time zone,
+	tz timestamp with time zone
+)
+
+insert into timezones values(
+
+	timestamp without time zone '2023-03-07 10:50',
+	timestamp with time zone '2023-03-07 10:50'
+)
+
+select * from timezones
+
+
+
+--DATE OPERATORS------------------
+
+
+select now():: date;
+
+select current_date;
+
+select to_char(current_date,'dd/mm/yy')
+
+select to_char(current_date,'DDD')
+
+select to_char(current_date,'WW')
+
+select to_char(current_date,'yy')
+
