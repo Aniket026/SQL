@@ -1,0 +1,28 @@
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2)
+);
+
+
+
+DELIMITER $$
+
+CREATE PROCEDURE AddEmployee(
+    IN p_FirstName VARCHAR(50),
+    IN p_LastName VARCHAR(50),
+    IN p_Department VARCHAR(50),
+    IN p_Salary DECIMAL(10, 2)
+)
+BEGIN
+    INSERT INTO Employees (FirstName, LastName, Department, Salary)
+    VALUES (p_FirstName, p_LastName, p_Department, p_Salary);
+END $$
+
+DELIMITER ;
+
+
+
+CALL AddEmployee('John', 'Doe', 'IT', 75000.00);
