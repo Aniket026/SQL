@@ -12,7 +12,7 @@
   <li>String functions</li>
   <li>Subquery</li>
   <li>Case in SQL</li>
-  <li>Like </li>
+  <li>Like & Ilike </li>
   <li>Create Table/Insert Value</li>
   <li>Update/Delete</li>
   <li>psycopg2<br>
