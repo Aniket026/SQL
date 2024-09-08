@@ -1,0 +1,36 @@
+
+CREATE TABLE Departments (
+    DepartmentID SERIAL PRIMARY KEY,
+    DepartmentName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Employees (
+    EmployeeID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    DepartmentID INT REFERENCES Departments(DepartmentID),
+    Salary DECIMAL(10, 2) NOT NULL
+);
+
+
+INSERT INTO Departments (DepartmentName) VALUES
+('Sales'),
+('HR'),
+('IT');
+
+
+INSERT INTO Employees (FirstName, LastName, DepartmentID, Salary) VALUES
+('Aniket', 'Borawake', 1, 5000),
+('Pranit', 'borkar', 2, 6000),
+('rushi', 'Chobhe', 1, 4500),
+('Roshan', 'Ghoepade', 3, 7000);
+
+
+
+CREATE VIEW EmployeeDepartmentView AS
+SELECT e.EmployeeID, e.FirstName, e.LastName, d.DepartmentName, e.Salary
+FROM Employees e
+JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+
+
+DROP VIEW IF EXISTS EmployeeDepartmentView;
