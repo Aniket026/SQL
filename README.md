@@ -16,6 +16,7 @@
   <li>Create Table/Insert Value</li>
   <li>Update/Delete</li>
   <li>psycopg2<br>
+  <li>View<br>
   <ul>
     <li>Connect Python with Database</li>
     <li>Create Table in Python using SQL query</li>
