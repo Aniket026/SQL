@@ -1,0 +1,33 @@
+CREATE TABLE NumericExamples (
+    id INT PRIMARY KEY,
+    number DECIMAL(10, 2),
+    divisor DECIMAL(10, 2)
+);
+
+
+INSERT INTO NumericExamples (id, number, divisor) VALUES
+(1, -5.76, 3),
+(2, 9.87, 4),
+(3, 16.23, 2),
+(4, -12.34, 5),
+(5, 22.56, 0),
+(6, 49.99, 7);
+
+
+SELECT id, number, ABS(number) AS abs_value FROM NumericExamples;
+
+
+SELECT id, number, CEIL(number) AS ceil_value FROM NumericExamples;
+
+
+SELECT id, number, FLOOR(number) AS floor_value FROM NumericExamples;
+
+SELECT id, number, ROUND(number, 1) AS rounded_value FROM NumericExamples;
+
+SELECT id, number, divisor, MOD(number, divisor) AS mod_value FROM NumericExamples WHERE divisor != 0;
+
+
+SELECT id, number, POWER(number, 2) AS power_value FROM NumericExamples;
+
+
+SELECT id, number, SQRT(ABS(number)) AS sqrt_value FROM NumericExamples;
