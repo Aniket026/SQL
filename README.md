@@ -17,7 +17,7 @@
   <li>Update/Delete</li>
   <li>View<br>
   <li>Group by/Order by</li>l
-  
+  <li>Window functions</li>
   </ul>
   </li>
 </ol>
