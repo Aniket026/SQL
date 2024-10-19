@@ -1,0 +1,77 @@
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(100),
+    student_marks INT
+);
+
+
+INSERT INTO students (student_id, student_name, student_marks)
+VALUES 
+(1, 'aniket', 85),
+(2, 'rahul', 90),
+(3, 'ram', 76),
+(4, 'sham', 88),
+(5, 'rushi', 91),
+(6, 'pranit', 61)
+(7, 'yash', 98)
+(8, 'roshan', 51)
+(9, 'akash', 71);
+
+--SUM()
+SELECT student_id,student_name,student_marks,
+    SUM(student_marks) OVER (ORDER BY student_marks DESC) AS total
+FROM 
+    students;
+
+--AVG()
+SELECT  student_id, student_name,student_marks,
+    AVG(student_marks) OVER () AS average_marks
+FROM 
+    students;
+
+
+--RANK()
+
+SELECT student_id,student_name,student_marks,
+    RANK() OVER (ORDER BY student_marks DESC) AS rank
+FROM 
+    students;
+
+--DENSE_RANK()
+
+
+SELECT student_id,student_name,student_marks,
+    DENSE_RANK() OVER (ORDER BY student_marks DESC) AS dense_rank
+FROM 
+    students;
+
+--LEG()
+
+SELECT student_id,student_name,student_marks,
+    LAG(student_marks,1) OVER (ORDER BY student_marks DESC) AS leg
+FROM 
+    students;
+
+--LEAD()
+
+SELECT student_id,student_name,student_marks,
+    LAG(student_marks,1) OVER (ORDER BY student_marks DESC) AS  lead
+FROM 
+    students;
+
+
+--first_value()
+
+SELECT student_id,student_name,student_marks,
+    FIRST_VALUE(student_marks) OVER (ORDER BY student_marks DESC) AS first_value
+FROM 
+    students;
+
+
+
+--LAST_VALUE()
+
+SELECT student_id,student_name,student_marks,
+    FIRST_VALUE(student_marks) OVER (ROW BETWEEN UNBOUNDED PRESIDING AND UNBOUNDED FOLLOWING) AS last_value
+FROM 
+    students;
