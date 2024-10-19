@@ -19,5 +19,4 @@
   <li>Group by/Order by</li>l
   <li>Window functions</li>
   </ul>
-  </li>
 </ol>
