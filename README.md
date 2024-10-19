@@ -16,13 +16,8 @@
   <li>Create Table/Insert Value</li>
   <li>Update/Delete</li>
   <li>View<br>
-  <li>psycopg2<br>
+  <li>Group by/Order by</li>l
   
-  <ul>
-    <li>Connect Python with Database</li>
-    <li>Create Table in Python using SQL query</li>
-    <li>Fetch All rows using Python</li>
-    <li>Group by/Order by/Inner join</li>
   </ul>
   </li>
 </ol>
